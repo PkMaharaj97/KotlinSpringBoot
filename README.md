@@ -26,7 +26,7 @@ response:{
 }
 
 
-#Updating Book
+# Updating Book
 PUT--http://localhost:8080/api/books/2
 
 request:{"id":null, "name":"Java Fundementals", "category": "Development","author":"Dennis retche","Printer_ID":1}

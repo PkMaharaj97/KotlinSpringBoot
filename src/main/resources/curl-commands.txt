@@ -1,0 +1,69 @@
+Greeting Controller:
+====================
+curl -i http://localhost:8080/api/welcome/PraveenKumar
+
+===================
+Course Controller: |
+===================
+
+CREATE COURSE:
+==============
+curl -i \
+-d '{"id":null, "name":"Build Restful APIs using Kotlin and SpringBoot", "category": "Development"}' \
+-H "Content-Type: application/json" \
+-X POST http://localhost:8080/v1/courses
+
+curl -i \
+-d '{"id":null, "name":"Build Restful APIs using Kotlin and SpringBoot", "category": "Development","author":"UnKnown"}' \
+-H "Content-Type: application/json" \
+-X POST http://localhost:8080/api/books
+
+
+
+curl -i \
+-d '{"id":null, "name":"Build Reactive Microservices using Spring WebFlux/SpringBoot ", "category": "Development"}' \
+-H "Content-Type: application/json" \
+-X POST http://localhost:8080/v1/courses
+
+GET COURSES:
+==============
+curl -i http://localhost:8080/v1/courses
+curl -i http://localhost:8080/api/books
+
+
+UPDATE COURSE:
+==============
+curl -i \
+-d '{"id":null, "name":"Build Restful APIs using Kotlin & SpringBoot2", "category": "Development"}' \
+-H "Content-Type: application/json" \
+-X PUT http://localhost:8080/v1/courses/1
+
+
+DELETE COURSE:
+==============
+curl -i -X DELETE http://localhost:8080/v1/courses/1
+
+
+=======================
+Instructor Controller: |
+=======================
+CREATE INSTRUCTOR:
+==================
+curl -i \
+-d '{"id":null, "name":"Dilip Sundarraj"}' \
+-H "Content-Type: application/json" \
+-X POST http://localhost:8080/v1/instructors
+
+
+CREATE COURSE WITH INSTRUCTOR:
+==================
+curl -i \
+-d '{"id":null, "name":"Build Restful APIs using Kotlin and SpringBoot", "category": "Development", "instructorId": 1}' \
+-H "Content-Type: application/json" \
+-X POST http://localhost:8080/v1/courses
+
+
+if you face "curl : Cannot find drive. A drive with the name 'http' does not exist.
+            At line:1 char:1" error while running terminal execute below command in terminal
+
+
